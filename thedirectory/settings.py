@@ -97,7 +97,7 @@ WSGI_APPLICATION = 'thedirectory.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'directore',
+        'NAME': 'directorybase',
         'USER': 'leigh',
         'PASSWORD':'bezalel',
         'HOST': 'localhost',
@@ -149,7 +149,7 @@ cloudinary.config(
     SECURE = True
 )
 
-# AUTH_USER_MODEL = 'accounts.User'
+AUTH_USER_MODEL = 'accounts.User'
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
