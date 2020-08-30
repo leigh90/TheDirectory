@@ -1,7 +1,7 @@
 from django.db import models
 
 # CLOUDINARY IMPORTS
-# from cloudinary.models import CloudinaryField
+from cloudinary.models import CloudinaryField
 from pyuploadcare.dj.models import ImageField
 
 
@@ -10,8 +10,8 @@ from pyuploadcare.dj.models import ImageField
 class Agency(models.Model):
     agencyname = models.CharField(max_length = 200)
     registration_no = models.IntegerField()
-    agency_logo = ImageField(blank=True,manual_crop="")
-    agency_image = ImageField(blank=True,manual_crop="")
+    agency_logo = CloudinaryField(blank=True)
+    agency_image = CloudinaryField(blank=True)
     
     def __str__(self):
         return self.agencyname
@@ -31,7 +31,7 @@ class Agent(models.Model):
     registration_no = models.IntegerField()
     email = models.EmailField()
     phone_no = models.IntegerField()
-    profile_image = ImageField(blank=True,manual_crop="")
+    profile_image = CloudinaryField(blank=True)
 
 
 # class Property(models.Model):

@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'accounts',
     # 'registration',
     'bootstrap3',
-    # 'cloudinary',
+    'cloudinary',
     'pyuploadcare.dj',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -142,12 +142,24 @@ UPLOADCARE = {
     'secret': '4567cc17c40acd72511d',
 }
 
+# cloudinary.config(
+#     cloud_name = os.environ.get('CLOUD_NAME'),
+#     API_KEY = os.environ.get('API_KEY'),
+#     API_SECRET = os.environ.get('API_SECRET'),
+#     SECURE = True
+# )
+
+# CLOUD_NAME = dhs0sdngt
+# API_KEY = 917812857873495
+# API_SECRET = uhUhM4nnLbD-87cede7FPEeH798
+# CLOUDINARY_URL=cloudinary://917812857873495:uhUhM4nnLbD-87cede7FPEeH798@dhs0sdngt
+
 cloudinary.config(
-    cloud_name = os.environ.get('CLOUD_NAME'),
-    API_KEY = os.environ.get('API_KEY'),
-    API_SECRET = os.environ.get('API_SECRET'),
-    SECURE = True
+    cloud_name = 'dhs0sdngt',
+    api_key = '917812857873495',
+    api_secret ='uhUhM4nnLbD-87cede7FPEeH798'
 )
+
 
 AUTH_USER_MODEL = 'accounts.User'
 
