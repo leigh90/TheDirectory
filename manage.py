@@ -19,3 +19,11 @@ def main():
 
 if __name__ == '__main__':
     main()
+# ALLOWED_HOSTS='127.0.0.1:8000,localhost,.herokuapp.com'
+
+# CLOUDINARY_URL=cloudinary://917812857873495:uhUhM4nnLbD-87cede7FPEeH798@dhs0sdngt
+
+# CLOUD_NAME = dhs0sdngt
+# API_KEY = 917812857873495
+# API_SECRET = uhUhM4nnLbD-87cede7FPEeH798
+# CLOUDINARY_URL=cloudinary://917812857873495:uhUhM4nnLbD-87cede7FPEeH798@dhs0sdngt
