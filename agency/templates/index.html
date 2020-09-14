@@ -9,43 +9,47 @@
 {% for agency in all_agencies %}
 
     <!-- Card -->
+
     <div class="col-lg-4 col-md-6 col-sm-10">
-            <div class="card">
-                <!-- Card image -->
-                    <div class="view overlay">
-                      <img class="card-img-top" src="{{agency.agency_logo.url}}" alt="Card image cap">
-                      <a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                      </a>
-                    </div>
+      <div class="card"  >
+        <!-- Card image -->
+        <div class="view overlay">
+          <img class="card-img-top" src="{{agency.agency_logo.url}}" style=" height: 25rem;" alt="Card image cap">
+            <a href="#!">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+        </div>
                   
-                    <!-- Card content -->
-                    <div class="col-md-4">
+        <!-- Card content -->
+        <div class="col-md-4">
                         
-                    </div>
-                    <div class="card-body">
-                  
-                      <!-- Title -->
-                      <h4 class="card-title"> <a href="{{agency.id}}">{{agency.agencyname}}</a></h4>
-                      <!-- Text -->
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <!-- Button -->
-                      <a href="{{agency.id}}" class="btn btn-primary">View Properties</a>
-                  
-                    </div>
-
+        </div>
+        <div class="card-body">
+          <!-- Title -->
+          <h4 class="card-title"> <a href="{{agency.id}}">{{agency.agencyname}}</a></h4>
+          <!-- Text -->
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <!-- Button -->
+          <a href="{{agency.id}}" class="btn btn-primary">View Properties</a>
+        </div>
+      </div>
     </div>
+  <!-- End of Card -->
 
+{% endfor%}
+<div class="row add-agency">
+  <div class="  col-lg-12 ">
+    <a href="{% url 'agency:addagency' %}"><h2>Add an Agency</h2></a>
+    <form action="#"  method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{form.as_p}}
+    
+    <input type="submit" value="Add Agency">
   
+    </form>
   </div>
-  <!-- Card -->
-  {% endfor%}
-<a href="{% url 'agency:addagency' %}"><h2>Add an Agency</h2></a>
-  <form action="#"  method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{form.as_p}}
-  
-  <input type="submit" value="Add Agency">
 
-  </form>
+</div>
+
+
 {% endblock%}

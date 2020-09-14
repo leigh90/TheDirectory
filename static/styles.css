@@ -1,5 +1,6 @@
 *{
     font-family: 'Slabo 27px', serif;
+    /* color: red; */
    
 }
 body{
@@ -15,7 +16,17 @@ body{
 nav.a{
     color: black;
 }
+.add-agency{
+    margin-top: 20%;
+    text-align: center;
+}
+/* .card{
+    height: 10%;
+} */
+/* .card-img-top{
+    height: 100%;
 
+} */
 
 
 
