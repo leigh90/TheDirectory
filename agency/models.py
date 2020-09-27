@@ -10,7 +10,7 @@ from pyuploadcare.dj.models import ImageField
 class Agency(models.Model):
     agencyname = models.CharField(max_length = 200)
     registration_no = models.IntegerField()
-    agency_logo = CloudinaryField(blank=True)
+    # agency_logo = CloudinaryField(blank=True)
     agency_image = CloudinaryField(blank=True)
     
     def __str__(self):

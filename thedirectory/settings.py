@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'accounts',
     # 'registration',
     'bootstrap3',
+    "bootstrap4",
     'cloudinary',
     'pyuploadcare.dj',
     'django.contrib.admin',

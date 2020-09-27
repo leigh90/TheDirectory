@@ -1,5 +1,18 @@
-<form method="post">
-{%csrf_token%}
-{{form.as_p}}
-{{ form.avatar }}
-<input type="submit" value="Add Agency">
+{% extends 'base.html'%}
+{% load bootstrap3 %}
+{% load static%}
+{% load bootstrap4 %}
+
+{% block content%}
+<form method="post" class="form">
+    {%csrf_token%}
+    {% bootstrap_form form %}
+    <!-- {{form.as_p}} -->
+    {{ form.avatar }}
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Add Agency</button>
+    {% endbuttons %}
+    
+    <!-- <input type="submit" value="Add Agency"> -->
+{% endblock%}
+
