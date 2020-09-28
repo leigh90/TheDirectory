@@ -2,4 +2,5 @@
 .pyc
 .env
 .lock
-
+Pipfile.lock
+Pipfile
